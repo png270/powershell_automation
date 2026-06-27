@@ -9,9 +9,9 @@ Remove the multi-line comment characters below <#....#> #>
 
 <# #Requires -RunAsAdministrator #>
 Write-Output "<TCP CONN LISTEN>" >> "output002.txt"
-Get-NetTCPConnection | Where-Object {$_.State -eq "Listen"} | Out-File -FilePath "C:\Users\siddhi.lad\OneDrive - Schulte Group\Desktop\automate\output002.txt" -Append
+Get-NetTCPConnection | Where-Object {$_.State -eq "Listen"} | Out-File -FilePath "C:\Users\<your-folder>\Desktop\automate\output002.txt" -Append
 Write-Output "</TCP CONN LISTEN>" >> "output002.txt"
 
 Write-Output "<NETSTAT ANO>" >> "output002.txt"
-cmd /c "netstat -ano" | Out-File -FilePath "C:\Users\siddhi.lad\OneDrive - Schulte Group\Desktop\automate\output002.txt" -Append
+cmd /c "netstat -ano" | Out-File -FilePath "C:\Users\<your-folder>\Desktop\automate\output002.txt" -Append
 Write-Output "</NETSTAT ANO>" >> "output002.txt"
